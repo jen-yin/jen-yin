@@ -13,10 +13,19 @@
        <li><a href="/blog">Blog</a></li>
      </ul>
    </nav>
-     <div class="content">
-    <!-- Include the content of README.md -->
-    <?php include('README.md'); ?>
-     </div>
+ <div class="content" id="markdownContent">
+    <!-- The content of README.md will be loaded here using JavaScript -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // Fetch and render the content of README.md using JavaScript
+    fetch('README.md')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('markdownContent').innerHTML = marked(text);
+      });
+  </script>
    <footer>
    <ul>
      <li><a href="https://jen-yin.github.io/jen-yin/">Contact Me</a></li>
