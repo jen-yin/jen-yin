@@ -5,6 +5,6 @@
 - 🌱 I’m currently learning SQL for data analysis 📈 and Python 🐍 for fun.
 - 💞️ My interests: reading, writing, painting, video games, movies, baking
 - 📖 Book I'm currently reading: "The Light We Carry" by Michelle Obama
-- 📫 How to reach me: jen.c.leung@gmail.com
+- 📫 How to reach me: https://www.linkedin.com/in/jenyin/
 
 
