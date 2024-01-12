@@ -16,10 +16,29 @@
    <div class="container">
      <div class="blurb">
        <h1>About Jen</h1>
-       <!-- Add an iframe to display the README content -->
-       <iframe src="https://raw.githubusercontent.com/jen-yin/jen-yin/blob/main/README.md" width="100%" height="600px"></iframe>
-     </div>
-   </div>
+       <!-- The div where README content will be injected -->
+      <div id="readme-content"></div>
+    </div>
+  </div>
+  <footer>
+    <ul>
+      <li><a href="https://forms.gle/W9gkUH9hcjYLtEcx6/">Contact Me</a></li>
+    </ul>
+  </footer>
+
+  <!-- JavaScript to fetch and display README content -->
+  <script>
+    // Fetch the README content from GitHub
+    fetch('https://raw.githubusercontent.com/jen-yin/jen-yin/main/README.md')
+      .then(response => response.text())
+      .then(markdown => {
+        // Convert Markdown to HTML using marked
+        const html = marked(markdown);
+
+        // Insert the HTML into the div
+        document.getElementById('readme-content').innerHTML = html;
+      });
+  </script>
    <footer>
    <ul>
      <li><a href="https://forms.gle/W9gkUH9hcjYLtEcx6/">Contact Me</a></li>
