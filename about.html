@@ -16,8 +16,22 @@
    <div class="container">
      <div class="blurb">
        <h1>About Jen</h1>
-       <!-- The div where README content will be injected -->
-      <div id="readme-content"></div>
+  <!-- JavaScript to fetch and display README content -->
+  <script>
+    // Fetch the README content from GitHub Markdown API
+    fetch('https://api.github.com/markdown/raw', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain',
+      },
+      body: `https://raw.githubusercontent.com/jen-yin/jen-yin/main/README.md`,
+    })
+      .then(response => response.text())
+      .then(html => {
+        // Insert the HTML into the div
+        document.getElementById('readme-content').innerHTML = html;
+      });
+  </script>
     </div>
   </div>
   <footer>
@@ -25,24 +39,5 @@
       <li><a href="https://forms.gle/W9gkUH9hcjYLtEcx6/">Contact Me</a></li>
     </ul>
   </footer>
-
-  <!-- JavaScript to fetch and display README content -->
-  <script>
-    // Fetch the README content from GitHub
-    fetch('https://raw.githubusercontent.com/jen-yin/jen-yin/main/README.md')
-      .then(response => response.text())
-      .then(markdown => {
-        // Convert Markdown to HTML using marked
-        const html = marked(markdown);
-
-        // Insert the HTML into the div
-        document.getElementById('readme-content').innerHTML = html;
-      });
-  </script>
-   <footer>
-   <ul>
-     <li><a href="https://forms.gle/W9gkUH9hcjYLtEcx6/">Contact Me</a></li>
-   </ul>
-   </footer>
  </body>
 </html>
