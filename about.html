@@ -16,20 +16,18 @@
    <div class="container">
      <div class="blurb">
        <h1>About Jen</h1>
-  <!-- JavaScript to fetch and display README content -->
+<!-- JavaScript to fetch and display README content -->
   <script>
-    // Fetch the README content from GitHub Markdown API
-    fetch('https://api.github.com/markdown/raw', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'text/plain',
-      },
-      body: `https://raw.githubusercontent.com/jen-yin/jen-yin/main/README.md`,
-    })
+    // Fetch the README content from GitHub
+    fetch('https://raw.githubusercontent.com/jen-yin/jen-yin/main/README.md')
       .then(response => response.text())
-      .then(html => {
-        // Insert the HTML into the div
-        document.getElementById('readme-content').innerHTML = html;
+      .then(markdown => {
+        // Create a div and set its innerHTML to the README content
+        const div = document.createElement('div');
+        div.innerHTML = markdown;
+
+        // Insert the div into the designated container
+        document.getElementById('readme-content').appendChild(div);
       });
   </script>
     </div>
