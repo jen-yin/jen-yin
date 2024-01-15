@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @jen-yin 🐺
-- 🇨🇦 I'm based in Canada 
+- 🍁 I'm based in Canada 
 - 👀 I’m interested in new opportunities as a Senior Product Manager
 - 🗃️ My work experience: 8 years in product management 🎁, 5 years in marketing 📮, 5 years in operations 🏗️
 - 💼 Types of products I have delivered: onboarding 🛫, GTM 💰, authenticated e-commerce acquisition 🤑, self-serve support 🤗, authenticated self-serve account management 🗄️, two kids (1 boy ♂️, 1 girl ♀️) 👶👶😆
